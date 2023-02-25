@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --container-width: 1250px;
+  --main-color: linear-gradient(
+    5deg,
+    rgba(227, 54, 37, 1) 0%,
+    rgba(99, 35, 23, 0.9906556372549019) 100%
+  );
+  --primary-color: rgba(99, 35, 23, 0.9906556372549019);
+  --link-color: #333;
+  --list-color: rgb(102, 99, 99);
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  background-color: #fbf7f7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  display: block;
+}
+
+header {
+  background: rgb(227, 54, 37);
+  background: var(--main-color);
+}
+
+.clip {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clip-1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.m-top {
+  margin-top: 0.5em;
+}
+
+.kannada-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--container-width);
+  padding: 1em 0;
+}
+
+.current-date {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.kannada-news-logo img {
+  width: 120px;
+}
+
+.district-menu {
+  width: 250px;
+}
+
+.select-menu-btn {
+  background-color: #fff;
+  border-radius: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  position: relative;
+}
+
+.select-text {
+  flex: 1;
+  padding-left: 1.2em;
+  font-size: 1.1rem;
+}
+
+.select-menu-btn i {
+  font-size: 1.5rem;
+  margin-right: 1em;
+  color: grey;
+  transition: 0.2s;
+}
+
+.district-menu.active .select-menu-btn i {
+  transform: rotate(-180deg);
+}
+
+.district-options {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 15px;
+  padding: 1.2em;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  background-color: #fff;
+  position: absolute;
+  display: none;
+}
+
+.district-options::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.district-options::-webkit-scrollbar:vertical {
+  width: 11px;
+}
+
+.district-options::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(189, 136, 136, 0.5);
+}
+
+.district-options::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.district-menu.active .district-options {
+  display: block;
+}
+
+.district-option {
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--link-color);
+}
+
+.district-option a {
+  color: var(--link-color);
+}
+
+.district-option:hover {
+  background-color: #f2f2f2;
+}
+
+.kannada-main-nav {
+  border-bottom: 0.5px solid rgb(179, 176, 176);
+}
+
+.nav-icon .hamburger {
+  width: 20px;
+  height: 3px;
+  background: #333;
+  position: relative;
+  transition: 0.5s;
+}
+
+.nav-icon .hamburger::before,
+.nav-icon .hamburger::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #333;
+  transition: 0.5s;
+}
+
+.nav-icon .hamburger::before {
+  top: -7px;
+}
+
+.nav-icon .hamburger::after {
+  top: 7px;
+}
+
+.nav-icon.active .hamburger {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-icon.active .hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.nav-icon.active .hamburger::after {
+  transform: rotate(135deg);
+  top: 0;
+}
+
+.kannada-nav {
+  display: flex;
+  margin: 0 auto;
+  padding: 1em 0em;
+  gap: 1em;
+  align-items: center;
+  max-width: var(--container-width);
+  position: relative;
+}
+
+.kannada-nav-list {
+  display: flex;
+}
+
+.kannada-nav-list li a {
+  color: var(--link-color);
+}
+
+.kannada-nav-list li:not(:nth-child(1)) {
+  margin-left: 2em;
+}
+
+.nav-search {
+  width: 50px;
+  text-align: end;
+  margin-left: auto;
+}
+
+.kannada-sub-nav {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.kannada-sub-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 1em 0em;
+  gap: 1em;
+  align-items: center;
+  max-width: var(--container-width);
+}
+
+.kannada-sub-list li:not(:nth-child(1)) {
+  margin-left: 1.2em;
+}
+
+.kannada-sub-list li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--list-color);
+}
+
+.kannada-sub-list li:first-child a {
+  color: var(--primary-color);
+}
+
+.kannada-mega-menu {
+  position: absolute;
+  background-color: #fff;
+  top: 56px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 999;
+  padding: 1.2em;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out;
+}
+
+.kannada-mega-menu.active-mega {
+  opacity: 1;
+  height: auto;
+}
+
+.mega-sub-menu {
+  width: 20%;
+  padding: 0 5px;
+}
+
+.mega-menu h3 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  max-width: 170px;
+  text-transform: uppercase;
+}
+
+.mega-menu * li {
+  padding: 3px 0px;
+  font-size: 0.9em;
+}
+
+.mega-menu * a {
+  color: var(--link-color);
+}
+
+.mega-sub-menu .mega-menu + .mega-menu {
+  margin-top: 1.2em;
+}
+
+.kannada-breaking-news {
+  margin: 2em auto 0;
+}
+
+.breaking-tag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.breaking-tag-main {
+  color: var(--primary-color);
+  margin-right: 5px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  align-self: flex-end;
+}
+
+.breaking-tag .bottom-border {
+  flex: 1;
+  align-self: flex-end;
+  height: 3px;
+  background: var(--main-color);
+}
+
+.breaking-tag-more {
+  color: var(--primary-color);
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+}
+
+.breaking-news-details {
+  margin: 0.5em;
+}
+
+.breaking-news-details a {
+  color: var(--link-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.news-right-card {
+  margin-bottom: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.right-card-details {
+  padding: 15px;
+}
+
+.right-card-image {
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.right-card-image img {
+  border-radius: 5px;
+}
+
+.breaking-news-bottom {
+  margin-top: 0.6em;
+}
+
+.breaking-news-bottom span:first-child {
+  color: var(--primary-color);
+}
+
+.breaking-news-bottom:not(span:first-child) {
+  color: var(--list-color);
+}
+
+.card-details-bottom {
+  margin-top: 0.5em;
+}
+
+.card-details-bottom h3 a {
+  color: var(--link-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.kannada-trending {
+  margin: 2em auto;
+}
+
+.trending-videos {
+  margin: 0.4em;
+}
+
+#iframe {
+  border-radius: 7px;
+}
+
+.trending-details {
+  margin-top: 0.2em;
+}
+
+.trending-details h3 {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.trending-image {
+  margin: 0.4em 0;
+}
+
+.trending-image img {
+  border-radius: 7px;
+  width: 180px;
+  height: 100px;
+}
+
+.sub-section-list {
+  display: flex;
+  list-style-type: none;
+  border: 1px solid var(--primary-color);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.sub-section-list li {
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.sub-section-list li a {
+  color: var(--primary-color);
+}
+
+.sub-section-main-image {
+  position: relative;
+}
+
+.sub-section-main-image img {
+  border-radius: 7px;
+}
+
+.sub-section-main-image h3 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 1rem;
+  margin: 0 7px;
+}
+
+.sub-section-main-image h3 a {
+  color: #fff;
+}
+
+.sub-section-news-listing {
+  padding: 5px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.sub-section-news-listing li:not(:first-child) {
+  margin-top: 5px;
+}
+
+.sub-section-news-listing li {
+  border-bottom: 1px dotted grey;
+  padding: 0.7em 0;
+}
+
+.sub-section-news-listing li a {
+  color: var(--link-color);
+}
+
+.sub-section-images {
+  padding-left: 10px;
+}
+
+.sub-section-image img {
+  width: 220px;
+  height: 120px;
+  border-radius: 7px;
+}
