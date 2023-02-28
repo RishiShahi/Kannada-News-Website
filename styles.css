@@ -61,6 +61,14 @@ header {
   overflow: hidden;
 }
 
+.p-3 {
+  padding: 3px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
 .p-8 {
   padding: 8px;
 }
@@ -89,6 +97,10 @@ header {
   margin: 10px 0px;
 }
 
+.default-font {
+  font-size: 1rem;
+}
+
 .f-size-m {
   font-size: 0.9rem;
 }
@@ -99,6 +111,11 @@ header {
 
 .f-weight-lg {
   font-weight: 500;
+}
+
+.image-s {
+  width: 80px;
+  height: 80px;
 }
 
 .kannada-header-main {
@@ -537,6 +554,7 @@ i#next {
 
 .sub-section-main-image {
   position: relative;
+  margin: 12px 0px;
 }
 
 .sub-section-main-image img {
@@ -636,7 +654,6 @@ i#next {
 .top-stories {
   list-style-type: circle;
   list-style-position: inside;
-  padding: 5px;
 }
 
 .top-stories > li {
@@ -877,5 +894,66 @@ i#next {
   }
   .card-details-bottom {
     padding: 0px !important;
+  }
+}
+
+@media only screen and (min-width: 521px) and (max-width: 1100px) {
+  .kannada-header-main {
+    margin: 0 8px;
+  }
+  .kannada-nav {
+    margin: 0 8px;
+    padding: 0.5em 0;
+  }
+  .kannada-nav-list {
+    flex-wrap: wrap;
+  }
+  .kannada-nav-list > li {
+    margin-left: 1.2em !important;
+  }
+  .kannada-mega-menu {
+    top: 70px;
+  }
+  .kannada-sub-list {
+    margin: 0 8px;
+    padding: 0.5em 0;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .kannada-sub-list > li {
+    margin-left: 1em !important;
+  }
+  .breaking-news-left {
+    margin-top: 12px;
+  }
+  .news-right-card {
+    padding: 0 !important;
+    margin-top: 12px;
+  }
+  .right-card-image img {
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 100px;
+    height: 70px;
+  }
+  .trending-video #iframe {
+    width: 150px;
+  }
+  .trending-images {
+    padding: 0.1em 0;
+  }
+  .trending-image img {
+    width: 150px;
+  }
+  .breaking-news-details h2 {
+    font-size: 1.2rem;
+  }
+  .image-s {
+    width: 68px !important;
+    height: 68px !important;
+    padding-right: 0.1em;
+  }
+  .default-font {
+    font-size: 0.8rem;
   }
 }
