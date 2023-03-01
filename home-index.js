@@ -49,13 +49,13 @@ arrowButtons.forEach(function (button) {
 });
 
 arrowIcons.forEach(function (icon) {
-  icon.addEventListener("click", function () {
-    districts.scrollLeft += icon.id === "left" ? -100 : 100;
+  icon.addEventListener("click", function (e) {
+    districts.scrollLeft += e.target.id === "left" ? -100 : 100;
   });
 });
 
 trendingArrowIcons.forEach(function (icon) {
-  icon.addEventListener("click", function () {
-    trending.scrollLeft += icon.id === "left" ? -100 : 100;
+  icon.addEventListener("click", function (e) {
+    trending.scrollLeft += e.target.id === "left" ? -100 : 100;
   });
 });

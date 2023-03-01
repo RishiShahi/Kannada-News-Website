@@ -89,6 +89,10 @@ header {
   margin-top: 1em;
 }
 
+.m-tb-2 {
+  margin-top: 2.5em;
+}
+
 .m-top-1 {
   margin-top: 10px;
 }
@@ -97,8 +101,12 @@ header {
   margin: 10px 0px;
 }
 
+.m-bottom {
+  margin-bottom: 15px;
+}
+
 .default-font {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .f-size-m {
@@ -602,7 +610,7 @@ i#next {
   border-radius: 7px;
 }
 
-.district-category {
+.sliding-category {
   display: flex;
   overflow-x: hidden;
   align-items: center;
@@ -618,7 +626,6 @@ i#next {
   overflow-x: hidden;
   gap: 10px;
   border-radius: 0.8em;
-  width: 92%;
   scroll-behavior: smooth;
 }
 
@@ -751,6 +758,125 @@ i#next {
 
 .footer-links ul li a {
   color: white;
+}
+
+/*--------------details news css------------*/
+
+.side-news-left ul li {
+  margin: 10px 0;
+}
+
+.side-news-left ul li a {
+  color: var(--link-color);
+}
+
+.main-heading-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.whatsapp {
+  background-color: green;
+}
+
+.facebook {
+  background-color: rgb(34, 34, 177);
+}
+
+.twitter {
+  background-color: rgb(61, 184, 233);
+}
+
+.telegram {
+  background-color: rgb(106, 108, 131);
+}
+
+.details-main-news h1 {
+  font-size: 1.7rem;
+}
+
+.details-main-news p {
+  padding: 5px;
+  font-size: 1.1rem;
+  margin: 10px 0px;
+  font-weight: 400;
+}
+
+.details-main-news p span {
+  font-weight: bold;
+}
+
+.left-news-cards {
+  padding: 10px;
+}
+
+.left-news-card {
+  margin: 5px 0;
+  padding: 3px;
+}
+
+.left-news-card img {
+  border-radius: 5px;
+}
+
+.left-news-card h3 {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  padding: 3px;
+  font-weight: 600;
+}
+
+.left-news-card h3 a {
+  color: var(--link-color);
+}
+
+.related-stories-card {
+  display: flex;
+  gap: 1em;
+  overflow-x: hidden;
+  padding: 5px;
+  scroll-behavior: smooth;
+}
+
+.story-card {
+  flex: 0 0 20%;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.story-card img {
+  border-radius: 5px;
+}
+
+.story-card h3 {
+  padding: 5px 5px 0px 5px;
+  font-size: 1rem;
+}
+
+.story-card h3 a {
+  color: var(--link-color);
 }
 
 @media screen and (max-width: 520px) {
@@ -894,6 +1020,12 @@ i#next {
   }
   .card-details-bottom {
     padding: 0px !important;
+  }
+  .details-main-news h1 {
+    font-size: 1.3rem;
+  }
+  .social-icons {
+    gap: 0.5em;
   }
 }
 
